@@ -1,0 +1,17 @@
+/* table {
+    border: 1px solid black;
+} */
+
+table, th, td {
+    border: 1px solid black;
+}
+
+button {
+    min-height: 2.4em;
+    margin: 0.5em;
+}
+
+input {
+    min-height: 2em;
+    max-width: 7em;
+}
