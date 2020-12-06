@@ -10,14 +10,16 @@ class InputClue extends Component {
     }
 
     validateCode = (input) => {
-        const isValid = input.replace(/\W/g, '').toUpperCase() === this.props.currentClue.code.toUpperCase();
-        if (isValid) {
-            alert('Correct!');
-            this.props.finishCurrentClue()
-            return true;
-        } else {
-            alert('Nope');
-            return false;
+        if (this.props) {
+            const isValid = input.replace(/\W/g, '').toUpperCase() === this.props.currentClue.code.toUpperCase();
+            if (isValid) {
+                alert('Correct!');
+                this.props.finishCurrentClue()
+                return true;
+            } else {
+                alert('Nope');
+                return false;
+            }
         }
     }
 

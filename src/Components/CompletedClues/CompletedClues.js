@@ -12,7 +12,6 @@ class CompletedClues extends Component {
     }
 
     render() {
-
         return (
             <div className={classes.table}>
                 <table>
