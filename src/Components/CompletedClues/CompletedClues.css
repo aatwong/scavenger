@@ -2,9 +2,13 @@
     border: 1px solid black;
 } */
 
-table, th, td {
-    border: 1px solid black;
-}
+    table, th, td {
+        border: 1px solid black;
+    }
+    
+    table {
+        width: 100%;
+    }
 
 button {
     min-height: 2.4em;

@@ -12,8 +12,15 @@ class CompletedClues extends Component {
     }
 
     render() {
+        let completed = '';
+        if (this.props.completedClues.length > 0) {
+            completed = 'Completed:'
+        } else {
+            completed = ''
+        }
         return (
             <div className={classes.table}>
+                <h5>{completed}</h5>
                 <table>
                 {this.props.completedClues.map(clue => (
                     <tr key={clue.code}>

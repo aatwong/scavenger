@@ -1,0 +1,7 @@
+.form, button {
+    min-height: 2.7em;
+}
+
+.form, input {
+    min-height: 3em;
+}
