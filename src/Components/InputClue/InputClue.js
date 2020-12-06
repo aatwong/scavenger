@@ -94,7 +94,7 @@ class InputClue extends Component {
                     </Modal.Header>
                     <Modal.Body>
                         <div>
-                            <iframe src={this.state.gifUrl} frameBorder='0' scrolling='no' width='100%' height='250'></iframe>
+                            <iframe title='success' src={this.state.gifUrl} frameBorder='0' scrolling='no' width='100%' height='250'></iframe>
                         </div>
                     </Modal.Body>
                     <Modal.Footer>
@@ -115,7 +115,7 @@ class InputClue extends Component {
                     </Modal.Header>
                     <Modal.Body>
                         <div>
-                            <iframe src={this.state.gifUrl} frameBorder='0' scrolling='no' width='100%' height='250'></iframe>
+                            <iframe title='unsuccess' src={this.state.gifUrl} frameBorder='0' scrolling='no' width='100%' height='250'></iframe>
                         </div>
                     </Modal.Body>
                     <Modal.Footer>

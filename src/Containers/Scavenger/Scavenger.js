@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ls from 'local-storage'
 import classes from './Scavenger.css';
 import CompletedClues from '../../Components/CompletedClues/CompletedClues'
@@ -52,7 +52,7 @@ class Scavenger extends React.Component {
     getNextClue() {
         const nextClue = getRandomNewClue(this.state.completedClues);
         console.log(nextClue);
-        if (nextClue == 'none') {
+        if (nextClue === 'none') {
             this.setState({isFinished: true}, () => {
                 ls.set('isFinished', true)
             })
@@ -84,7 +84,7 @@ class Scavenger extends React.Component {
             currentClue = (
                 <div>
                     {/* <img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width='250'/> */}
-                    <iframe src='https://gfycat.com/ifr/TemptingResponsibleKatydid' frameborder='0' scrolling='no' allowfullscreen width='300' height='250'></iframe>
+                    <iframe title='Great Success' src='https://gfycat.com/ifr/TemptingResponsibleKatydid' frameborder='0' scrolling='no' allowfullscreen width='300' height='250'></iframe>
                     <br />
                     <strong>CONGRATULATIONS! YOU HAVE COMPLETED THE WILD GOOSE CHASE.</strong><br /><i>Find Frat for instructions on final challenge.</i>
                 </div>
@@ -118,7 +118,7 @@ class Scavenger extends React.Component {
         
         return (
             <div className={classes.wrapper}>
-                <h1>Title</h1>
+                <h1>The Official App</h1>
                     {currentClue}
                 <br />
                 <br />
