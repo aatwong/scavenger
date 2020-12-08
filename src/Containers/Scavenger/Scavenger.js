@@ -4,6 +4,9 @@ import classes from './Scavenger.css';
 import CompletedClues from '../../Components/CompletedClues/CompletedClues'
 import InputClue from '../../Components/InputClue/InputClue'
 import { getRandomNewClue } from '../../Services/ClueGenerator'
+import Modal from 'react-bootstrap/Modal'
+import Button from 'react-bootstrap/Button'
+
 
 class Scavenger extends React.Component {
 
@@ -13,11 +16,13 @@ class Scavenger extends React.Component {
             isPlaying: false,
             completedClues: [],
             inProgressClue: {},
-            isFinished: false
+            isFinished: false,
+            showConfirmEndGameModal: false
         };
         this.beginScavengerHunt = this.beginScavengerHunt.bind(this);
         this.finishCurrentClue = this.finishCurrentClue.bind(this)
         this.restartGame = this.restartGame.bind(this)
+        this.clickRestart = this.clickRestart.bind(this)
     }
 
     componentDidMount() {
@@ -25,7 +30,8 @@ class Scavenger extends React.Component {
             isPlaying: ls.get('isPlaying') || false,
             completedClues: ls.get('completedClues') || [],
             inProgressClue: ls.get('inProgressClue') || {},
-            isFinished: ls.get('isFinished') || false
+            isFinished: ls.get('isFinished') || false,
+            showConfirmEndGameModal: ls.get('showConfirmEndGameModal') || false
         })
     }
 
@@ -64,11 +70,16 @@ class Scavenger extends React.Component {
     }
 
     restartGame() {
-        this.setState({isPlaying: false, completedClues: [], inProgressClue: {}, isFinished: false})
+        this.setState({isPlaying: false, completedClues: [], inProgressClue: {}, isFinished: false, showConfirmEndGameModal: false})
         ls.set('isPlaying', false);
         ls.set('completedClues', []);
         ls.set('inProgressClue', {});
         ls.set('isFinished', false);
+        ls.set('showConfirmEndGameModal', false)
+    }
+
+    clickRestart() {
+        this.setState({showConfirmEndGameModal: true})
     }
 
     render() {
@@ -111,7 +122,7 @@ class Scavenger extends React.Component {
                     <br />
                     <br />
 
-                    <button onClick={this.restartGame}>new game</button>
+                    <button onClick={this.clickRestart}>new game</button>
                 </div>
             )
         }
@@ -123,6 +134,29 @@ class Scavenger extends React.Component {
                 <br />
                 <br />
                     {body}
+
+                <Modal
+                    show={this.state.showConfirmEndGameModal}
+                    backdrop="static"
+                    keyboard={false}
+                >
+                    <Modal.Header closeButton>
+                    <Modal.Title>Are you sure you want to end this?</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <div>
+                            <p>You won't be able to recover the clues you have solved.</p>
+                        </div>
+                    </Modal.Body>
+                    <Modal.Footer>
+                    <Button variant="primary" onClick={() => {this.setState({showConfirmEndGameModal: false})}}>
+                        No, keep me in this
+                    </Button>
+                    <Button variant="danger" onClick={() => {this.restartGame()}}>
+                        Yes, I quit
+                    </Button>
+                    </Modal.Footer>
+                </Modal>
             </div>
         );
     }
