@@ -129,11 +129,17 @@ class Scavenger extends React.Component {
         
         return (
             <div className={classes.wrapper}>
-                <h1>The Official App</h1>
+                <br />
+                <h2>The Companion App</h2>
+                <br />
                     {currentClue}
                 <br />
                 <br />
                     {body}
+                <br />
+                <br />
+
+                <a target="_blank" rel="noreferrer noopener" href="https://docs.google.com/document/d/1UX1-mm4LxNbf63WmVrL1srUiVQDPERLNcXIUWQqVIsI/edit?usp=sharing">Rules and Instructions</a>
 
                 <Modal
                     show={this.state.showConfirmEndGameModal}
