@@ -135,7 +135,12 @@ const clueList = [
         thing: "Double wick candle",
         clue: "I am a candle with a second flame: lift me up and I’ll show the way.",
         code: "DWC"
-    }
+    },
+    {
+        thing: "Google Docs Instructions",
+        clue: "Look in the docs and there you might see, a code with three letters emboldened for thee.",
+        code: "PSH"
+    },
 ]
 
 function getRandomInt(max) {
