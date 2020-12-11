@@ -84,6 +84,7 @@ class Scavenger extends React.Component {
 
     render() {
         let currentClue = null;
+
         if (this.state.isPlaying === false) {
             currentClue = (
                 <div>
@@ -101,11 +102,18 @@ class Scavenger extends React.Component {
                 </div>
             )
         } else {
-            currentClue = (
+            const audioLinkMessage = 'Listen to this audio in a private place: '
+
+            currentClue = this.state.inProgressClue.audioLink === "" ? (
                 <div>
                     <strong><i>{this.state.inProgressClue.clue}</i></strong>
                 </div>
-            )
+            ) : (
+                <div>
+                    <strong>{audioLinkMessage} <br /><br /></strong>  
+                    <strong><i>{this.state.inProgressClue.clue}</i></strong>
+                </div>
+            );
         }
 
         let body = null;
