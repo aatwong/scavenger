@@ -6,7 +6,7 @@ import InputClue from '../../Components/InputClue/InputClue'
 import { getRandomNewClue } from '../../Services/ClueGenerator'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
-
+import Sound from 'react-sound'
 
 class Scavenger extends React.Component {
 
@@ -82,6 +82,11 @@ class Scavenger extends React.Component {
         this.setState({showConfirmEndGameModal: true})
     }
 
+    playAudio() {
+        const audioElement = document.getElementsByClassName("audio-element")[0]
+        audioElement.play()
+    }
+
     render() {
         let currentClue = null;
 
@@ -110,7 +115,15 @@ class Scavenger extends React.Component {
                 </div>
             ) : (
                 <div>
-                    <strong>{audioLinkMessage} <br /><br /></strong>  
+                    <strong>{audioLinkMessage}</strong>
+                    <div>
+                        <button onClick={this.playAudio}>
+                            <span>Play Audio</span>
+                        </button>
+                        <audio className="audio-element">
+                            <source src="https://assets.coderrocketfuel.com/pomodoro-times-up.mp3"></source>
+                        </audio>
+                    </div>
                     <strong><i>{this.state.inProgressClue.clue}</i></strong>
                 </div>
             );
