@@ -105,7 +105,7 @@ const clueList = [
         audioLink: ""
     },
     {
-        thing: "Skies on the wall",
+        thing: "Skis on the wall",
         clue: "Some say I have aged and cannot perform well, but I do give support on the sleet. I'm all about protecting your feet.",
         code: "WLS",
         audioLink: ""
