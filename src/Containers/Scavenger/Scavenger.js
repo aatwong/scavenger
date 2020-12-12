@@ -111,7 +111,7 @@ class Scavenger extends React.Component {
                 </div>
             )
         } else {
-            const audioLinkMessage = 'Click here to listen to the audio clue. (Wear headphones or listen in private place)'
+            const audioLinkMessage = '~Click here to listen to the audio clue. (Wear headphones or listen in private place) Written clue below. ~'
 
             currentClue = this.state.inProgressClue.audioLink === "" ? (
                 <div>
@@ -120,9 +120,9 @@ class Scavenger extends React.Component {
             ) : (
                 <div>
                     <Text onPress={ () => Linking.openURL(this.state.inProgressClue.audioLink, '_blank') }>
-                        {audioLinkMessage}
+                        <font size="+1"><i> {audioLinkMessage} {"\n\n"} </i></font>
                     </Text> 
-                    <strong><i>{this.state.inProgressClue.clue}</i></strong>
+                    <strong>{this.state.inProgressClue.clue}</strong>
                 </div>
             );
         }
