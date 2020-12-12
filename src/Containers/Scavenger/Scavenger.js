@@ -6,7 +6,7 @@ import InputClue from '../../Components/InputClue/InputClue'
 import { getRandomNewClue } from '../../Services/ClueGenerator'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
-import Sound from 'react-sound'
+import { Linking, Text } from 'react-native'
 
 class Scavenger extends React.Component {
 
@@ -83,7 +83,11 @@ class Scavenger extends React.Component {
     }
 
     playAudio() {
-        const audioElement = document.getElementsByClassName("audio-element")[0]
+        // const audioElement = document.getElementsByClassName("audio-element")[0]
+        const mp3File = document.getElementsByClassName("audio-element")[0]
+        console.log(mp3File)
+
+        const audioElement = new Audio(mp3File);
         audioElement.play()
     }
 
@@ -107,7 +111,7 @@ class Scavenger extends React.Component {
                 </div>
             )
         } else {
-            const audioLinkMessage = 'Listen to this audio in a private place: '
+            const audioLinkMessage = 'Click here to listen to the audio clue. (Wear headphones or listen in private place)'
 
             currentClue = this.state.inProgressClue.audioLink === "" ? (
                 <div>
@@ -115,19 +119,24 @@ class Scavenger extends React.Component {
                 </div>
             ) : (
                 <div>
-                    <strong>{audioLinkMessage}</strong>
-                    <div>
-                        <button onClick={this.playAudio}>
-                            <span>Play Audio</span>
-                        </button>
-                        <audio className="audio-element">
-                            <source src="https://assets.coderrocketfuel.com/pomodoro-times-up.mp3"></source>
-                        </audio>
-                    </div>
+                    <Text onPress={ () => Linking.openURL(this.state.inProgressClue.audioLink, '_blank') }>
+                        {audioLinkMessage}
+                    </Text> 
                     <strong><i>{this.state.inProgressClue.clue}</i></strong>
                 </div>
             );
         }
+
+                    // <strong>href={audioLinkMessage}</strong>
+                    //      <strong>{}
+                    // <div>
+                    //     <button onClick={this.playAudio}>
+                    //         <span>Play Audio</span>
+                    //     </button>
+                    //     <audio controls className="audio-element">
+                    //         <source src={this.state.inProgressClue.audioLink}></source>
+                    //     </audio>
+                    // </div>
 
         let body = null;
         if (this.state.isPlaying) {
