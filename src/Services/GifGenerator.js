@@ -15,23 +15,17 @@ export const getGifUrl = (theme) => {
 const successGifs = [
     'https://gfycat.com/ifr/DefiniteGlitteringInexpectatumpleco',
     'https://gfycat.com/ifr/ViciousUncomfortableJunebug',
-    'https://gfycat.com/ifr/HastyKeenHake',
-    'https://gfycat.com/ifr/MadeupLazyLarva',
-    'https://gfycat.com/ifr/InfantileWhimsicalAfricancivet',
-    'https://gfycat.com/lawfullavishammonite',
-    'https://gfycat.com/admiredunfitemu',
     'https://gfycat.com/frayedflashyjoey-success-great-success',
-    'https://gfycat.com/cheeryspitefulblueandgoldmackaw-oprah-winfrey-success-happy-yes-celebrate'
+    'https://gfycat.com/ifr/CheerySpitefulBlueandgoldmackaw',
+    'https://gfycat.com/ifr/AmusedSmugAiredaleterrier'
 ]
 
 const failGifs = [
     'https://gfycat.com/ifr/PreciousFirmJaeger',
-    'https://gfycat.com/ifr/YellowishColorlessAfricanbushviper',
-    'https://gfycat.com/ifr/WhiteFineCero',
-    'https://gfycat.com/infatuatedwideeyedayeaye',
-    'https://gfycat.com/entiresecondanteater',
-    'https://gfycat.com/skeletalpoliticalghostshrimp-gregory-bauge-speedwobbles-kevin-sireau'
-
+    'https://gfycat.com/ifr/infatuatedwideeyedayeaye',
+    'https://gfycat.com/ifr/AnotherFaintBug',
+    'https://gfycat.com/ifr/IllegalWellinformedGreendarnerdragonfly',
+    'https://gfycat.com/ifr/DeafeningHarmoniousHyrax'
 ]
 
 function getRandomInt(max) {
