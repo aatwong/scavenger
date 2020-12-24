@@ -26,77 +26,95 @@ export const getRandomNewClue = (completedCluesArr = []) => {
 }
 
 const clueList = [
-    // Used for Sumer/Mihir 30th birthday
+    // Used for Sumer/Mihir 30th birthday. Need 15 clues. 13 are 3-letter; 2 are 4-letter
     {
-        thing: "Coffee maker",
+        thing: "1 Coffee maker",
         clue: "Rise and shine, it's time for me to grind. If I don't deliver, bodies may quiver.",
-        code: "CFM",
+        code: "BVM",
         audioLink: ""
     },
     {
-        thing: "Garage mirror",
+        thing: "2 Garage mirror",
         clue: "Mirror mirror on the wall, who's the fittest of them all? Is it Sandy baby or Sharki, Sumer, Mihir, or Eshki?",
         code: "MRG",
         audioLink: ""
     },
     {
-        thing: "TEDx Intuit sign",
-        clue: "Technology, entertainment, design. My name is on a sign. I showed face at Intuit to help listeners pursue (it).",
-        code: "SIT",
+        thing: "3 TEDx Intuit sign",
+        clue: "Technology, entertainment, design. My name is on a sign.",
+        code: "RIT",
         audioLink: ""
     },
     {
-        thing: "Horse believe your dreams poster",
-        clue: "Believe in yourself and achieve your dreams..says unicorn posters and memes.",
+        thing: "4 Horse believe your dreams poster",
+        clue: "Believe in yourself and achieve your dreams... says unicorn posters and memes.",
         code: "PDH",
         audioLink: ""
     },
     {
-        thing: "Bead curtains",
+        thing: "5 Bead curtains",
         clue: "Hanging from the ceiling, I've been jingling a long time. I'm ready to alert Esha if there's a suspicious crime.",
-        code: "BCT",
+        code: "OMT",
         audioLink: ""
     },
     {
-        thing: "Stereo in parents' room",
-        clue: "Three score and three years ago, I hit my prime. But then I became irrelevant and replaced by cassettes, then CDs, then DVDs, and now the digital music of Amazon Prime.",
-        code: "STP",
+        thing: "6 Stereo in parents' room",
+        clue: "Three score and three years ago, I hit my prime. But then I became irrelevant and was replaced by cassettes, CDs, DVDs, and, now ,the digital music of Amazon Prime.",
+        code: "WTN",
         audioLink: ""
     },
     {
-        thing: "God calendars in parents' room",
+        thing: "7 God calendars in parents' room",
         clue: "I used to accurately provide the day and date, but time passed me by. Now I just hang pretty and tall, giving auspicious religious vibes to all.",
-        code: "GCR",
+        code: "RLR",
         audioLink: ""
     },
     {
-        thing: "Dark knight trilogy posters",
+        thing: "8 Dark knight trilogy posters",
         clue: "I am your knight on darkened days, I protect you from the god's malaise. My name, in fact, consists of three parts, To figure me out, use your smarts.",
-        code: "DKT",
+        code: "GST",
         audioLink: ""
     },
     {
-        thing: "TBD - Cal basketball hoop in mihir's room",
-        clue: "",
-        code: "",
+        thing: "9 Greek statues at top the staircase",
+        clue: "Up upon the mountain, we lay, perched stationary all day. We are guarded by pretty fence, so our leaving wouldn't make any sense.",
+        code: "MHE",
         audioLink: ""
     },
     {
-        thing: "Greek statues at top the staircase",
-        clue: "Up upon the mountain, we lay, perched stationary all day. We are guarded by pretty gate, so our leaving wouldn't make any sense.",
-        code: "GSS",
+        thing: "10 Cal basketball hoop in mihir's room",
+        clue: "Swish swish, I was around when the kids were young. But now they're old, and I've been downsized—forever bearing being hung.",
+        code: "EOI",
         audioLink: ""
     },
     {
-        thing: "TBD - living room couch covers",
-        clue: "",
-        code: "",
+        thing: "11 Google docs instructions",
+        clue: "Look in the docs and there you might see, a code with three letters emboldened for thee.",
+        code: "FSH",
         audioLink: ""
     },
     {
-        thing: "TBD - ",
-        clue: "",
-        code: "",
+        thing: "12 Uno",
+        clue: "Reverse, draw four, skip and some more. There is only one game so hard core.",
+        code: "TNO",
+        audioLink: ""
+    },
+    {
+        thing: "13 Water heater",
+        clue: "That shower not warm enough for you? You can blame me for that.",
+        code: "ROI",
+        audioLink: ""
+    },
+    {
+        thing: "14 Underside of Dining Table",
+        clue: "While you eat, I stare at your feet.",
+        code: "EEIO",
+        audioLink: ""
+    },
+    {
+        thing: "15 Outside shed",
+        clue: "Got any leftover stuff? They'll go here. But careful, I'm not secure so it can quickly disappear.",
+        code: "OEOE",
         audioLink: ""
     },
     // Used for Pinetop Mini Scavenger Hunt

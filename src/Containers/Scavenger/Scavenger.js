@@ -107,7 +107,7 @@ class Scavenger extends React.Component {
                     {/* <img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width='250'/> */}
                     <iframe title='Great Success' src='https://gfycat.com/ifr/TemptingResponsibleKatydid' frameborder='0' scrolling='no' allowfullscreen width='300' height='250'></iframe>
                     <br />
-                    <strong>CONGRATULATIONS! YOU HAVE COMPLETED THE WILD GOOSE CHASE.</strong><br /><i>Find Esha for instructions on final challenge.</i>
+                    <strong>CONGRATULATIONS! You have completed the wild goose chase.</strong><br /><i>Find Esha for instructions on final challenge.</i>
                 </div>
             )
         } else {
@@ -160,7 +160,7 @@ class Scavenger extends React.Component {
         return (
             <div className={classes.wrapper}>
                 <br />
-                <h2>The Companion App</h2>
+                <h2>The Scavenger App</h2>
                 <br />
                     {currentClue}
                 <br />
@@ -169,7 +169,7 @@ class Scavenger extends React.Component {
                 <br />
                 <br />
 
-                <a target="_blank" rel="noreferrer noopener" href="https://docs.google.com/document/d/1UX1-mm4LxNbf63WmVrL1srUiVQDPERLNcXIUWQqVIsI/edit?usp=sharing">Rules and Instructions</a>
+                <a target="_blank" rel="noreferrer noopener" href="https://docs.google.com/document/d/1BaMojiuIwRk-XR95p5BDZxmKyRh8wpHMQi0Jjr6176Y/edit?usp=sharing">Rules and Instructions</a>
 
                 <Modal
                     show={this.state.showConfirmEndGameModal}
